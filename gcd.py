@@ -99,6 +99,11 @@ class linear_diophantine:
         return tot_express
 
 
+def check_item(lst:list, elements:list):
+    for item in lst:
+        if item not in list:
+            return False
+    return True
 
 r = linear_diophantine(1260,978,24)
 print(r.express_gcd_base())
@@ -158,10 +163,11 @@ def gcd(a,b):
     return Euclid_division_algorithm(a,b)[-1][-2]
 
 
+
 """
 Need to fix params div_algo max
 """
-d = Euclid_division_algorithm(978,1260)
+d = Euclid_division_algorithm(1331,)
 q = Euclid_div_output(d)
 print_Euclid(q)
 x,y = symbols('x y')
